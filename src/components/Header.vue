@@ -1,32 +1,30 @@
 <template>
   <div class="header">
-    <img class="logo" alt="Vue logo" src="../assets/logo.png">
+    <img class="logo" alt="Vue logo" src="../assets/logo.png" />
     <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
+      <li><router-link to="/">Accueil</router-link></li>
+      <li><router-link to="/services">Services</router-link></li>
+      <li><router-link to="/projets">Projets</router-link></li>
+      <li><router-link to="/contact">Contact</router-link></li>
     </ul>
     <ConnectWeb />
   </div>
 </template>
 
 <script>
-import ConnectWeb from './ConnectWeb.vue'
+import ConnectWeb from "./ConnectWeb.vue";
 
 export default {
-  name: 'HeaderWeb',
+  name: "HeaderWeb",
   components: {
-    ConnectWeb
-  }
-
-}
+    ConnectWeb,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.header{
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -38,23 +36,22 @@ export default {
   justify-content: space-around;
   align-items: center;
 }
-.logo{
+.logo {
   height: 50px;
 }
-ul{
+ul {
   display: flex;
   margin: 0;
   padding: 0;
   gap: 1rem;
   list-style: none;
 }
-li{
+li {
   padding: 0;
   margin: 0;
 }
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
-
 </style>
